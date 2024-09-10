@@ -1,6 +1,6 @@
 package xyz.chronosirius.discordself
 
-import io.ktor.client.HttpClient;
+import io.ktor.client.HttpClient
 
 class GatewayConnection {
     public val token: String;
@@ -11,7 +11,7 @@ class GatewayConnection {
         this.client = client;
     }
 
-    fun connect(handler: Object): GatewayConnection {
+    fun connect(handler: Any?): GatewayConnection {
         return this
     }
 }
