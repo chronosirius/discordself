@@ -36,10 +36,15 @@ dependencies {
     implementation("io.ktor:ktor-client-websockets:$ktor_version")
     implementation("io.ktor:ktor-client-okhttp:$ktor_version")
     implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-websockets:$ktor_version")
+    implementation("io.ktor:ktor-client-okhttp:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0-RC.2")
     implementation("com.google.code.gson:gson:2.11.0")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 
 }
 
