@@ -6,14 +6,17 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+val ktor_version: String by project
+
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     alias(libs.plugins.kotlin.jvm)
-
+    
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
 
     kotlin("plugin.serialization") version "2.0.20"
+    
 }
 
 repositories {
@@ -29,13 +32,14 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation(libs.guava)
     
-    implementation("io.ktor:ktor-client-core:2.3.12")
-    implementation("io.ktor:ktor-client-websockets:2.3.12")
-    implementation("io.ktor:ktor-client-okhttp:2.3.12")
-    implementation("io.ktor:ktor-client-content-negotiation:2.3.12")
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-websockets:$ktor_version")
+    implementation("io.ktor:ktor-client-okhttp:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0-RC.2")
+    implementation("com.google.code.gson:gson:2.11.0")
 
 }
 
